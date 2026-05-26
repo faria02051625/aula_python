@@ -1,0 +1,30 @@
+{% extends 'paginas/layout.html' %}
+
+{% block content %}
+<main class="dashboard-ambiental">
+    <header>
+        <!-- A variável title é injetada via Python ou assume o valor padrão -->
+        <h1>{{ title | default('Painel de Licenciamento e Recursos Hídricos') }}</h1>
+        <p>Bem-vindo ao Sistema Integrado de Gestão Ambiental (SIGA).</p>
+    </header>
+    
+    <section class="kpi-cards">
+        <article class="card">
+            <h3>Conformidade ESG</h3>
+            <p>Status: Operacional e Regulamentado</p>
+        </article>
+        <article class="card">
+            <h3>Monitoramento Hídrico</h3>
+            <p>Eficiência: $$98.5\%$$ de aproveitamento na bacia local.</p>
+        </article>
+    </section>
+</main>
+{% endblock %}
+
+{% block javascript %}
+<!-- super() mantém o javascript original do layout.html e adiciona novos scripts -->
+{{ super() }}
+<script>
+    console.log("Módulos de telemetria ambiental inicializados com sucesso.");
+</script>
+{% endblock %}

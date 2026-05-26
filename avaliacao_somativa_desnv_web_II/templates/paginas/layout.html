@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <!-- Exigência: variável title or 'Titulo da Página' -->
+    <title>Titulo da Página</title>
+</head>
+<body>
+    <!-- Exigência: bloco de conteúdo logo após abertura da tag BODY -->
+    {% block content %}
+    <div>
+        <h1>Gestão Sistêmica Inicializada</h1>
+        <p>A interface foi carregada com sucesso.</p>
+    </div>
+    {% endblock %}
+
+    <!-- Exigência: bloco de javascript antes do fechamento da tag BODY -->
+    {% block javascript %}
+    <script>
+        console.log("Validação de scripts operando corretamente.");
+    </script>
+    {% endblock %}
+</body>
+</html>
