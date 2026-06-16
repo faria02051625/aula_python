@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  --background: #f4f7f4;
+  --foreground: #10251b;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(circle at top left, rgba(47, 140, 87, 0.14), transparent 34rem),
+    linear-gradient(180deg, #f8fbf8 0%, var(--background) 38%, #eef4f0 100%);
+  color: var(--foreground);
+  min-height: 100vh;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+.focus-ring {
+  @apply focus:outline-none focus:ring-2 focus:ring-forest-500 focus:ring-offset-2 focus:ring-offset-white;
+}
+
+.glass-panel {
+  @apply border border-white/70 bg-white/80 shadow-soft backdrop-blur-xl;
+}
+
+.modern-field {
+  @apply focus-ring mt-1 w-full rounded-lg border border-slate-200 bg-white/90 px-3 py-2.5 text-sm text-slate-800 shadow-sm transition placeholder:text-slate-400 hover:border-forest-100;
+}
+
+.primary-button {
+  @apply focus-ring inline-flex items-center justify-center gap-2 rounded-lg bg-forest-600 px-4 py-2.5 text-sm font-semibold text-white shadow-sm shadow-forest-900/10 transition hover:bg-forest-700 disabled:cursor-not-allowed disabled:opacity-60;
+}
+
+.secondary-button {
+  @apply focus-ring inline-flex items-center justify-center gap-2 rounded-lg border border-slate-200 bg-white px-4 py-2.5 text-sm font-semibold text-slate-700 shadow-sm transition hover:border-forest-500 hover:text-forest-700 disabled:cursor-not-allowed disabled:opacity-60;
+}
